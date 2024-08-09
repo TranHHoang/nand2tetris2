@@ -1,0 +1,133 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           nand2tetris
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/nand2tetris#readme>
+homepage:       https://github.com/githubuser/nand2tetris#readme
+bug-reports:    https://github.com/githubuser/nand2tetris/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2023 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/nand2tetris
+
+library
+  exposed-modules:
+      HDL.Analyzer
+      HDL.Analyzer.Types
+      HDL.Compiler
+      HDL.Parser
+      HDL.Parser.Ast
+      Lib
+      N2T.HDL.Analyzer
+      N2T.HDL.Codegen
+      N2T.HDL.Parser
+      N2T.HDL.Parser.Types
+  other-modules:
+      Paths_nand2tetris
+  hs-source-dirs:
+      src
+  default-extensions:
+      DuplicateRecordFields
+      NoFieldSelectors
+      LambdaCase
+      OverloadedStrings
+      OverloadedLabels
+      ImportQualifiedPost
+      DeriveGeneric
+      NamedFieldPuns
+      OverloadedRecordDot
+      RecordWildCards
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      PyF
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , llvm-hs-pure
+    , megaparsec
+    , mtl
+    , optics-core
+    , optics-extra
+    , text
+  default-language: Haskell2010
+
+executable nand2tetris-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_nand2tetris
+  hs-source-dirs:
+      app
+  default-extensions:
+      DuplicateRecordFields
+      NoFieldSelectors
+      LambdaCase
+      OverloadedStrings
+      OverloadedLabels
+      ImportQualifiedPost
+      DeriveGeneric
+      NamedFieldPuns
+      OverloadedRecordDot
+      RecordWildCards
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PyF
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , llvm-hs-pure
+    , megaparsec
+    , mtl
+    , nand2tetris
+    , optics-core
+    , optics-extra
+    , text
+  default-language: Haskell2010
+
+test-suite nand2tetris-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_nand2tetris
+  hs-source-dirs:
+      test
+  default-extensions:
+      DuplicateRecordFields
+      NoFieldSelectors
+      LambdaCase
+      OverloadedStrings
+      OverloadedLabels
+      ImportQualifiedPost
+      DeriveGeneric
+      NamedFieldPuns
+      OverloadedRecordDot
+      RecordWildCards
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PyF
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , llvm-hs-pure
+    , megaparsec
+    , mtl
+    , nand2tetris
+    , optics-core
+    , optics-extra
+    , text
+  default-language: Haskell2010
